@@ -1,9 +1,9 @@
  # SIMPLE_12H_NTP_LEDMATRIX_v2
 ... a rare simple NTP Timekeeping on FC16_HW LED MATRIX
 
-- 8 Column LED MATRIX VCC run on D1 Mini 3V
+- 8 Column LED MATRIX VCC runs stable on D1 Mini 3V PIN powered by smart phone 5 DCV charger.
 - Onced sync wifi can be turned off until module rebooted.
-- Continues Precise Time keeping on same Timezone = UTC = GMT 
+- Continuous Precise Time keeping on same Timezone = UTC = GMT .
 - Precision Tested on 3 different esp8266 module ( D1R1+OLED & LCD,D1 MINI,NODEMCU and Wifi with different SSID"s.
 - Minimalist 7x5 Font & LED brightness for Independent power efficiency on solar powered 2 x 18650 battery shield. (untested)
 - Define LED MATRIX Type =  FC16_HW if similar or choose 7 other LED MATRIX Type, Default = PAROLA_HW
