@@ -7,6 +7,7 @@
 - Precision Tested on 3 different esp8266 module ( D1R1+OLED & LCD,D1 MINI,NODEMCU and Wifi with different SSID"s.
 - Minimalist 7x5 Font & LED brightness for Independent power efficiency on solar powered 2 x 18650 battery shield. (untested)
 - Define LED MATRIX Type =  FC16_HW if similar or choose 7 other LED MATRIX Type, Default = PAROLA_HW
+- If you notice the #include <time.h> did not exist in this sketch..... 
 
  - %a Abbreviated weekday name
  - %A Full weekday name
