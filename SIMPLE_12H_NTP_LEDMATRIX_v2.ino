@@ -2,19 +2,20 @@
 #include <MD_Parola.h>                // add from lib manager or similar
 #include <MD_MAX72xx.h>               // add from lib manager or similar
 #include <SPI.h>
-#include <ESP8266WiFi.h>
+#include <ESP8266WiFi.h>              // wifi drivers 
 
 const uint16_t sec_1 = 1000;          // delay definitions
 const uint16_t sec_2 = 2000;
 const uint16_t sec_15 = 15000;
 
-#define HARDWARE_TYPE MD_MAX72XX::FC16_HW
+#define HARDWARE_TYPE MD_MAX72XX::FC16_HW       // parola mirrored fix
 
 #define MAX_DEVICES 8               // define Led Matrix Col , 8 pixel * 8 pixel = 1 ,Default = 4 ,extended > 4
-#define DATA_PIN  13                // GPIO PIN on NODEMCU , D1 MINI , D1R1 ..or similar esp8266
+#define DATA_PIN  13                // GPIO PIN on NODEMCU , D1 MINI , D1R1 ,lolin ..or similar esp8266
 #define CS_PIN    15
 #define CLK_PIN   14
-
+// GND = COMMON GROUND
+// VCC = 3V OUTPUT PIN
 
 MD_Parola P = MD_Parola(HARDWARE_TYPE, CS_PIN, MAX_DEVICES);
 
@@ -23,7 +24,7 @@ const char* password = "10101010";         // Predefined password ...Can only be
 
 const char* ntpServer = "pool.ntp.org";
 const long  gmtOffset_sec = 28800;        // UTC= GMT +8 (My,Sg = Timezone), Find yours * 60 *60 for offset in sec
-const int   daylightOffset_sec = 0;
+const int   daylightOffset_sec = 0;       
 
 char buffer[80];
 int  counter = 60;
@@ -33,13 +34,14 @@ void setup(void)
 {
   P.begin();                                // init Parola drivers
   P.setIntensity(0);                        // Set Led Brightness 0 to 7
-  P.write("ArduinoWifi");
+  P.setTextAlignment(PA_CENTER);            // Centered text
+  P.write("Connecting");
   WiFi.begin(ssid, password);
   
   while (WiFi.status() != WL_CONNECTED) {
     delay(500); 
   }
-  P.write("     Get NTP");
+  P.write("Get NTP");
   delay(1000);
   
   configTime(gmtOffset_sec, daylightOffset_sec, ntpServer);
@@ -60,7 +62,7 @@ void printLocalTime()
   struct tm * timeinfo;
   time (&rawtime);
   timeinfo = localtime (&rawtime);
-  strftime (buffer,80,"  %I:%M:%S %p",timeinfo);        // adds custom Time format into buffer until displayed
+  strftime (buffer,80,"%I:%M:%S %p",timeinfo);        // adds custom Time format into buffer until displayed
   //Serial.println(buffer);
   P.print(buffer);
   delay(sec_1);
@@ -72,7 +74,7 @@ void printDateOnly()
   struct tm * timeinfo;
   time (&rawtime);
   timeinfo = localtime (&rawtime);
-  strftime (buffer,80," %a %d.%m.%y",timeinfo);           // adds custom Date format into buffer until displayed
+  strftime (buffer,80,"%a %d.%m.%y",timeinfo);           // adds custom Date format into buffer until displayed
   P.print(buffer);
 }
 
