@@ -11,11 +11,14 @@ const uint16_t sec_15 = 15000;
 #define HARDWARE_TYPE MD_MAX72XX::FC16_HW       // parola mirrored fix
 
 #define MAX_DEVICES 8               // define Led Matrix Col , 8 pixel * 8 pixel = 1 ,Default = 4 ,extended > 4
+
+// VCC = 3V OUTPUT PIN
+// GND = COMMON GROUND
 #define DATA_PIN  13                // GPIO PIN on NODEMCU , D1 MINI , D1R1 ,lolin ..or similar esp8266
 #define CS_PIN    15
 #define CLK_PIN   14
-// GND = COMMON GROUND
-// VCC = 3V OUTPUT PIN
+
+
 
 MD_Parola P = MD_Parola(HARDWARE_TYPE, CS_PIN, MAX_DEVICES);
 
