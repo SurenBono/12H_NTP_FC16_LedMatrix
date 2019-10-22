@@ -23,14 +23,15 @@ const uint16_t sec_15 = 15000;
 MD_Parola P = MD_Parola(HARDWARE_TYPE, CS_PIN, MAX_DEVICES);
 
 const char* ssid     = "Arduino Wifi";     // Tether identical SSID & PW on smart phone or similar for internet until time sync archieved
-const char* password = "10101010";         // Predefined password ...Can only be changed once every upload...
+const char* password = "10101010";         // Predefined password ...Can only be set once every sketch upload...
 
 const char* ntpServer = "pool.ntp.org";
 const long  gmtOffset_sec = 28800;        // UTC= GMT +8 (My,Sg = Timezone), Find yours * 60 *60 for offset in sec
-const int   daylightOffset_sec = 0;       
+const int   daylightOffset_sec = 0;       // No daylight saving on my area
 
 char buffer[80];
 int  counter = 60;
+WiFiClient client;
 
 void setup(void)
 
