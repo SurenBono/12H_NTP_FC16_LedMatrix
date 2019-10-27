@@ -1,4 +1,4 @@
- # SIMPLE_12H_NTP_LEDMATRIX_v2
+ # SIMPLE_12H_NTP_LEDMATRIX
 ... a rare simple NTP Timekeeping on FC16_HW LED MATRIX
 
 - 8 Column LED MATRIX VCC runs stable on D1 Mini 3V PIN powered by smart phone 5 DCV charger.
