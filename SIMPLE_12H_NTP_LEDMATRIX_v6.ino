@@ -2,8 +2,8 @@
 //   SIMPLE_12H_NTP_LEDMATRIX_v6 Developed by Sroto&Gargees (OpenSourced)
 //   http://srotogargees.business.site/
 //   Keeps running even when network down for a day until software resets in loop .
-// ** Version 6 Bugfix **
-// - Added Looping count ,( finally figure dit daut..yeeeay)
+//   ** Version 6 Bugfix **
+// - Added nested looping count for functions ,( finally figure dit daut..yeeeay)
 // - Precise Day & Date update if changes during display than delaying till next loop.
 // - Added ESP reset & sync function in loop since crystal oscil offsets +22 sec/day.
 
@@ -24,7 +24,7 @@
 MD_Parola P = MD_Parola(HARDWARE_TYPE, CS_PIN, MAX_DEVICES);
 
 const char* ssid     = "Arduino Wifi";    // Tether on Smartphone until sync is archieved...etc
-const char* password = "10101010";       // Pre-defined once every sketch upload
+const char* password = "10101010";        // Pre-defined once every sketch upload
 
 const char* ntpServer = "pool.ntp.org";
 const long  gmtOffset_sec = 28800;        // +8UTC = My,Sg, Find your GMT/UTC/TIMEZONE *60*60
@@ -97,7 +97,7 @@ void loop()
       counter = 0;                    
       P.write("Sync NTP");
       delay(SEC_1); 
-      setup();                        // Software Reset, reconnect and sync
+      setup();                        // Software Reset, reconnect and sync./ESP.reset 
     }
     else
     { 
