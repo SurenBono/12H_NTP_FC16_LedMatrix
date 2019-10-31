@@ -31,7 +31,6 @@ const long  gmtOffset_sec = 28800;        // +8UTC = My,Sg, Find your GMT/UTC/TI
 const int   daylightOffset_sec = 0;		    // Non daylight offset Zone
 
 char buffer[80];                   // Allocate static temp memory = buffer for time variables ,max=2000
-WiFiClient client;		             // Test Esp to un-broadcast as an open AP(station), Power efficiency issue
 const uint16_t SEC_1 = 1000;       // 1000 millisec = 1 Second
 int  counter = 0;              
 
@@ -42,6 +41,7 @@ void setup()
   P.setTextAlignment(PA_CENTER);		// Centering Text Display
   
   P.write("Connecting");
+  WiFi.mode(WIFI_STA);              // A wifi client, without this line it will broadcast esp#### ,energy efficient for battery setup
   WiFi.begin(ssid, password);
   while (WiFi.status() != WL_CONNECTED) 
   {
