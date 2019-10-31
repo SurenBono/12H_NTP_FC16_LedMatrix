@@ -18,11 +18,9 @@ const uint16_t sec_15 = 15000;
 #define CS_PIN    15
 #define CLK_PIN   14
 
-
-
 MD_Parola P = MD_Parola(HARDWARE_TYPE, CS_PIN, MAX_DEVICES);
 
-const char* ssid     = "Arduino Wifi";     // Tether identical SSID & PW on smart phone or similar for internet until time sync archieved
+const char* ssid     = "Arduino Wifi";     // Hotspot identical SSID & PW on smart phone or similar for internet until time sync archieved
 const char* password = "10101010";         // Predefined password ...Can only be set once every sketch upload...
 
 const char* ntpServer = "pool.ntp.org";
@@ -40,6 +38,7 @@ void setup(void)
   P.setIntensity(0);                        // Set Led Brightness 0 to 7
   P.setTextAlignment(PA_CENTER);            // Centered text
   P.write("Connecting");
+  WiFi.mode(WIFI_STA);
   WiFi.begin(ssid, password);
   
   while (WiFi.status() != WL_CONNECTED) {
@@ -94,8 +93,8 @@ void printDayOnly()
 
 void loop(void)
 {
-  printLocalTime();           // Update Sec for 20 sec until date display ...not learned loop yet 
-  printLocalTime();
+  printLocalTime();           // Update Sec for 20 sec until date display ...not learned nested looping count yet 
+  printLocalTime();           // check version 6
   printLocalTime();
   printLocalTime();
   printLocalTime();
