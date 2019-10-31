@@ -41,7 +41,7 @@ void setup()
   P.setTextAlignment(PA_CENTER);		// Centering Text Display
   
   P.write("Connecting");
-  WiFi.mode(WIFI_STA);              // A wifi client, without this line it will broadcast esp#### ,energy efficient for battery setup
+  WiFi.mode(WIFI_STA);             // A wifi client, without this line it will broadcast esp#### ,energy efficient for Solar battery setup...etc
   WiFi.begin(ssid, password);
   while (WiFi.status() != WL_CONNECTED) 
   {
