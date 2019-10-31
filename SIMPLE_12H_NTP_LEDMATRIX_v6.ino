@@ -23,7 +23,7 @@
 
 MD_Parola P = MD_Parola(HARDWARE_TYPE, CS_PIN, MAX_DEVICES);
 
-const char* ssid     = "Arduino Wifi";    // Tether on Smartphone until sync is archieved...etc
+const char* ssid     = "Arduino Wifi";    // Hotspot Access Point/SSID on Smartphone until sync is archieved...etc
 const char* password = "10101010";        // Pre-defined once every sketch upload
 
 const char* ntpServer = "pool.ntp.org";
