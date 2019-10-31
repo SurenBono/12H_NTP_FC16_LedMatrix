@@ -50,21 +50,16 @@ void setup()
   }
   Serial.println("connected...");
   Serial.println("local ip");
+        
   P.begin();
   P.setIntensity(0);
   P.setTextAlignment(PA_CENTER);
   Serial.println(WiFi.localIP());
+  WiFi.mode(WIFI_STA);      
   while (WiFi.status() != WL_CONNECTED) {delay(500);}
   P.write("Get NTP");
   delay(SEC_1); 
   configTime(gmtOffset_sec, daylightOffset_sec, ntpServer);
-  unsigned timeout = 5000;
-  unsigned start = millis();
-  while (!time(nullptr))
-  {
-    delay(1000);
-  }
-  delay(1000);
 }
 
 void printLocalTime()
