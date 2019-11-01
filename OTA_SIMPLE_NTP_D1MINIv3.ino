@@ -15,7 +15,7 @@
 #define CLK_PIN   14   // D5 = CLK
 
 #ifndef STASSID
-#define STASSID "Arduino Wifi"
+#define STASSID "Android Wifi"       // Cellular AP / Smartphone Hotspot
 #define STAPSK  "101010101"
 #endif
 
