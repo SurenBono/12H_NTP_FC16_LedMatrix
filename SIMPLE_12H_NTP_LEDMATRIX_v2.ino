@@ -20,7 +20,7 @@ const uint16_t sec_15 = 15000;
 
 MD_Parola P = MD_Parola(HARDWARE_TYPE, CS_PIN, MAX_DEVICES);
 
-const char* ssid     = "Arduino Wifi";     // Hotspot identical SSID & PW on smart phone or similar for internet until time sync archieved
+const char* ssid     = "Android Wifi" ;     // Hotspot identical SSID & PW on smart phone or similar for internet until time sync archieved
 const char* password = "10101010";         // Predefined password ...Can only be set once every sketch upload...
 
 const char* ntpServer = "pool.ntp.org";
