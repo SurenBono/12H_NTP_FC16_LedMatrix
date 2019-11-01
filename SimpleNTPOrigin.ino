@@ -3,7 +3,7 @@
 #include "time.h"		  // strftime works without it (flash updated esp micropyton) 
 #include <ESP8266WiFi.h>  //esp8266
 
-const char* ssid     = "Arduino Wifi";                    // your network SSID (name)
+const char* ssid     = "Android Wifi" ";                    // your network SSID (name)
 const char* password = "tm1010101";                       // your network password
 
 
