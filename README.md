@@ -1,5 +1,5 @@
- # SIMPLE_12H_NTP_LEDMATRIX
-a simple complex strftme NTP Timekeeping on FC16_HW LED MATRIX
+  # SIMPLE_12H_NTP_LEDMATRIX
+  a simple complex strftme NTP Timekeeping on FC16_HW LED MATRIX
 
 - 4 or more Column FC-16 LED MATRIX powered by phone 5 DCV charger.
 - Onced sync wifi can be turned off until module re-connect when wifi made available again.
@@ -12,7 +12,7 @@ a simple complex strftme NTP Timekeeping on FC16_HW LED MATRIX
 - Also detail on removing Hour leading zero via substring conversion.
 
 ---------------------------------------------------------------------------------------------------------------
-strftime - C++ Reference
+   strftime - C++ Reference
 
  - %a Abbreviated weekday name
  - %A Full weekday name
@@ -39,6 +39,6 @@ strftime - C++ Reference
  - You can include text literals (such as spaces and colons) to make a neater display or for padding between adjoining columns.
  - You can suppress the display of leading zeroes  by using the "#" character  (%#d, %#H, %#I, %#j, %#m, %#M, %#S, %#U, %#w, %#W, %#y,%#Y) *this didnt work
 
--n-
-
-Source https://forum.arduino.cc/index.php?topic=452680.0 developed by Sroto&Gargees™ 2019 
+   Source https://forum.arduino.cc/index.php?topic=452680.0 developed by Sroto&Gargees™ 2019 
+   
+   -n-
