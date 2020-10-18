@@ -1,13 +1,15 @@
  # SIMPLE_12H_NTP_LEDMATRIX
-... a rare simple NTP Timekeeping on FC16_HW LED MATRIX
+a simple complex strftme NTP Timekeeping on FC16_HW LED MATRIX
 
-- 8 Column LED MATRIX VCC runs stable on D1 Mini 3V PIN powered by smart phone 5 DCV charger.
-- Onced sync wifi can be turned off until module rebooted.
-- Continuous Precise Time keeping on same Timezone = UTC = GMT .
+- 4 or more Column FC-16 LED MATRIX powered by phone 5 DCV charger.
+- Onced sync wifi can be turned off until module re-connect when wifi made available again.
+- Continuous Precise Time keeping via UTC init.
 - Precision Tested on 3 different esp8266 module ( D1R1+OLED & LCD,D1 MINI,NODEMCU and Wifi with different SSID"s.
-- Minimalist 7x5 Font & LED brightness for Independent power efficiency on solar powered 2 x 18650 battery shield. (untested)
+- Minimalist 7x5 Font & LED brightness for Independent power efficiency if solar powered 2 x 18650 battery shield possible.
 - Define LED MATRIX Type =  FC16_HW if similar or choose 7 other LED MATRIX Type, Default = PAROLA_HW
-- If you notice the #include <time.h> did not exist in this sketch..... 
+- If you notice the #include <time.h> is not included in this sketch..... strftime comes with esp8266 lib
+- latest version has scrolling and weather addition.
+- Also detail on removing Hour leading zero via substring conversion.
 
  - %a Abbreviated weekday name
  - %A Full weekday name
@@ -34,6 +36,6 @@
  - You can include text literals (such as spaces and colons) to make a neater display or for padding between adjoining columns.
  - You can suppress the display of leading zeroes  by using the "#" character  (%#d, %#H, %#I, %#j, %#m, %#M, %#S, %#U, %#w, %#W, %#y,%#Y)
 
--  **Suppress leading zeroes didnt work in this case ..not know why..
+-n-
 
 Source https://forum.arduino.cc/index.php?topic=452680.0 developed by Sroto&Gargees™ 2019 
