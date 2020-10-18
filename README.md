@@ -37,7 +37,7 @@
  - %z %Z Time-zone name or abbreviation, (no characters if time zone is unknown)
  - %% Percent sign
  - You can include text literals (such as spaces and colons) to make a neater display or for padding between adjoining columns.
- - You can suppress the display of leading zeroes  by using the "#" character  (%#d, %#H, %#I, %#j, %#m, %#M, %#S, %#U, %#w, %#W, %#y,%#Y) *this didnt work
+ - You can suppress the display of leading zeroes  by using the "#" character  (%#d, %#H, %#I, %#j, %#m, %#M, %#S, %#U, %#w, %#W, %#y,%#Y) *this didnt work,convert char to      string and del the "0" column via substring.
 
    Source https://forum.arduino.cc/index.php?topic=452680.0 developed by Sroto&Gargees™ 2019 
    
