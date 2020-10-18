@@ -11,6 +11,9 @@ a simple complex strftme NTP Timekeeping on FC16_HW LED MATRIX
 - latest version has scrolling and weather addition.
 - Also detail on removing Hour leading zero via substring conversion.
 
+---------------------------------------------------------------------------------------------------------------
+strftime - C++ Reference
+
  - %a Abbreviated weekday name
  - %A Full weekday name
  - %b Abbreviated month name
@@ -34,7 +37,7 @@ a simple complex strftme NTP Timekeeping on FC16_HW LED MATRIX
  - %z %Z Time-zone name or abbreviation, (no characters if time zone is unknown)
  - %% Percent sign
  - You can include text literals (such as spaces and colons) to make a neater display or for padding between adjoining columns.
- - You can suppress the display of leading zeroes  by using the "#" character  (%#d, %#H, %#I, %#j, %#m, %#M, %#S, %#U, %#w, %#W, %#y,%#Y)
+ - You can suppress the display of leading zeroes  by using the "#" character  (%#d, %#H, %#I, %#j, %#m, %#M, %#S, %#U, %#w, %#W, %#y,%#Y) *this didnt work
 
 -n-
 
