@@ -20,16 +20,16 @@
 MD_Parola P = MD_Parola(HARDWARE_TYPE, CS_PIN, MAX_DEVICES);
 textEffect_t FX[4] ={PA_PRINT,PA_SCROLL_LEFT,PA_OPENING_CURSOR, PA_SCROLL_UP};
 
-const char* ssid                   = "Arduino Wifi";     
-const char* password               = "101010101";  
+const char* ssid                  = "Arduino Wifi";     
+const char* password              = "101010101";  
 
-char servername[]	                = "api.openweathermap.org"; 
-String weatherLang 	              = "&lang=en";
-String APIKEY 		                = "e876574712e8cd87bad58bc226831414";
-String CityID 		                = "1732811"; //Kluang
+char servername[]	          = "api.openweathermap.org"; 
+String weatherLang 	          = "&lang=en";
+String APIKEY 		          = "e876574712e8cd87bad58bc226831414";
+String CityID 		          = "1732811";                            // Kluang,Malaysia.
 
-const char* ntpServer 		        = "pool.ntp.org";
-const long  gmtOffset_sec 	  	  = 28800;       
+const char* ntpServer 		  = "pool.ntp.org";
+const long  gmtOffset_sec 	  = 28800;                                // 60 sec * 60 min * local UTC
 const int   daylightOffset_sec 	  = 0;
 
 const uint16_t One_SEC = 1000, Half_SEC = 500;
@@ -66,21 +66,21 @@ void printLocalTime()
   struct tm * timeinfo;
   time (&rawtime);
   timeinfo = localtime (&rawtime);
-  strftime (timex,45,"%p %I:%M:%S %d.%m.%y %p %I %M %S %A",timeinfo);
+  strftime (timex,45,"%p %I:%M:%S %d.%m.%y %p %I %M %S %A",timeinfo);         
   String TDDt   = timex;
   String T2     = TDDt.substring(21,32);if (T2.substring(3,4) == "0") {T2.remove(3,1);} 
   String T      = TDDt.substring(0,11) ;if (T.substring(3,4)   == "0") {T.remove(3,1);} 
          D      = TDDt.substring(32);
          Dt     = TDDt.substring(12,20);if (Dt.substring(0,1) == "0") {Dt.remove(0,1);}
          DDt    = D + "    " + Dt;
-		     k      = String(char(j))+ T ;
+         k      = String(char(j))+ T ;
          l      = String(char(j))+ T2 ;
 		     T.toCharArray(Txx,15);l.toCharArray(Txy,15);T2.toCharArray(T2x,15);
          k.toCharArray(Tx,15);
          DDt.toCharArray(DDtx,22);
          Serial.println(T + " " + D + " " + Dt);
          //delay(One_SEC);
-		     delay(Half_SEC);
+         delay(Half_SEC);   // Blink seperator every 1/2 sec
 }
 
 void getWeatherData() 
@@ -151,7 +151,7 @@ void getWeatherData()
   String AP               = ssid;
   String Weather          = "    "+AP+" "+rssi+"    "+D+"    "+Dt+"    "+loc+"    "+cloud+" "+(char(j))+"    Temp : "+String(temp)+(char(144))+"c    Hum : "+humid+" %    Prs : "+press+" hPa " ;
          Weather         += "    Wind : "+String(windSpeed, 1)+" m/s " +"  "+ (char(Arrow))+"  "+ String(windDeg) + (char(144)) +" "+Dir ;
-		     Weather         += "    Vis : "+ Vis + " km";
+	 Weather         += "    Vis : "+ Vis + " km";
          Weather.toCharArray(Weatherx,200);
 		 
   Serial.print( loc  + "," + country + " (" + lat + "," + lon + ") ,icon:" ) ;Serial.println(icon);
