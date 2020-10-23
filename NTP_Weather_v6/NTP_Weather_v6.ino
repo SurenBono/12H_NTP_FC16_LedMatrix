@@ -75,7 +75,7 @@ void printLocalTime()
          DDt    = D + "    " + Dt;
          k      = String(char(j))+ T ;
          l      = String(char(j))+ T2 ;
-		     T.toCharArray(Txx,15);l.toCharArray(Txy,15);T2.toCharArray(T2x,15);
+         T.toCharArray(Txx,15);l.toCharArray(Txy,15);T2.toCharArray(T2x,15);
          k.toCharArray(Tx,15);
          DDt.toCharArray(DDtx,22);
          Serial.println(T + " " + D + " " + Dt);
