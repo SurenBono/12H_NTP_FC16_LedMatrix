@@ -25,7 +25,7 @@ const char* password              = "101010101";
 
 char servername[]	          = "api.openweathermap.org"; 
 String weatherLang 	          = "&lang=en";
-String APIKEY 		          = "e876574712e8cd87bad58bc226831414";
+String APIKEY 		          = "API-TOKEN";
 String CityID 		          = "1732811";                            // Kluang,Malaysia.
 
 const char* ntpServer 		  = "pool.ntp.org";
