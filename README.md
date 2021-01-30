@@ -14,8 +14,8 @@
 - RSSI Strenght, Dayname, Date, Cloud Condition, Temperature , Atmospheric Pressure , Wind Speed / direction and Visibility reports every 40 seconds.
 - Time refresh atleast once every 500 millis blinky seperator with cloud icon.(rain,sunny..etc) later scrolls out other descriptions.
 - Tested working for more than a year.
-- Get & use the free Joining apikey token from openweathermap.org.
-- Requires Internet & router accesability .ISP Chargez may apply.
+- Get & use the free Joining apikey token from openweathermap.org.Find your city code as in pic folder suggests.
+- Requires Internet & router accesability .ISP Charges may apply.
 - Edit Font - https://pjrp.github.io/MDParolaFontEditor
 
 ---------------------------------------------------------------------------------------------------------------
