@@ -2,7 +2,7 @@
   a simple complex strftme NTP Timekeeping on FC16_HW LED MATRIX
 
 - 4 or more Column FC-16 LED MATRIX powered by phone 5 DCV charger.
-- Onced sync wifi can be turned off until module re-connect when wifi made available again.
+- Once synced wifi can be turned off until module re-connect when wifi made available again.
 - Continuous Precise Time keeping via UTC init.
 - Precision Tested on 3 different esp8266 module ( D1R1+OLED & LCD,D1 MINI,NODEMCU and Wifi with different SSID"s.
 - Minimalist 7x5 Font & LED brightness for Independent power efficiency if solar powered 2 x 18650 battery shield possible.
