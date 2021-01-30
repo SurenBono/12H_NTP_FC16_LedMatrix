@@ -18,6 +18,9 @@
 - Requires Internet & router accesability .ISP Charges may apply.
 - Edit Font - https://pjrp.github.io/MDParolaFontEditor
 
+Update Note 30.01.2021
+Programmed using Arduino ver 1.8.9 , esp8266 ver 2.5.0 on XP SP3
+
 ---------------------------------------------------------------------------------------------------------------
    strftime - C++ Reference
 
