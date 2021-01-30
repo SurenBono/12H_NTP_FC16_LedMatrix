@@ -2,7 +2,7 @@
   a simple complex strftme NTP Timekeeping on FC16_HW LED MATRIX
 
 - 4 or more Column FC-16 LED MATRIX powered by phone 5 DCV charger.
-- Once synced wifi can be turned off until module re-connect when wifi made available again.
+- Once synced wifi can be turned off until module re-connect . Only Time , scrolling Date & Dayname displays until wifi made available again for full weather forecast.
 - Continuous Precise Time keeping via UTC init.
 - Precision Tested on 3 different esp8266 module ( D1R1+OLED & LCD,D1 MINI,NODEMCU and Wifi with different SSID"s.
 - Minimalist 7x5 Font & LED brightness for Independent power efficiency if solar powered 2 x 18650 battery shield possible.
@@ -14,6 +14,9 @@
 - RSSI Strenght, Dayname, Date, Cloud Condition, Temperature , Atmospheric Pressure , Wind Speed / direction and Visibility reports every 40 seconds.
 - Time refresh atleast once every 500 millis blinky seperator with cloud icon.(rain,sunny..etc) later scrolls out other descriptions.
 - Tested working for more than a year.
+- Get & use the free Joining apikey token from openweathermap.org.
+- Requires Internet & router accesability .ISP Chargez may apply.
+- Edit Font - https://pjrp.github.io/MDParolaFontEditor
 
 ---------------------------------------------------------------------------------------------------------------
    strftime - C++ Reference
