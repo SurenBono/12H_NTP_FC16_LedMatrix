@@ -15,6 +15,7 @@
 - Time refresh atleast once every 500 millis blinky seperator with cloud icon.(rain,sunny..etc) later scrolls out other descriptions.
 - Tested working for more than a year.
 - Get & use the free Joining apikey token from openweathermap.org.Find your city code as in pic folder suggests.
+- Also convert your timezone to seconds and apply . example if UTC +8 = 8 * 60 sec * 60 min.
 - Requires Internet & router accesability .ISP Charges may apply.
 - Edit Font - https://pjrp.github.io/MDParolaFontEditor
 
