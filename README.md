@@ -9,7 +9,7 @@
 - Define LED MATRIX Type =  FC16_HW if similar or choose 7 other LED MATRIX Type, Default = PAROLA_HW
 - If you notice the #include <time.h> is not included in this sketch..... strftime comes with esp8266 lib
 - latest version has scrolling and weather addition.
-- Also detail on removing Hour leading zero via substring conversion.
+- Also detail on removing Hour leading zero via substring conversion to minimise 18 h daily of leading zero waste/useless led lit , energy efficient.
 - Added Weather cloud icon font to sync with openweathermap webicon pointers.
 - RSSI Strenght, Dayname, Date, Cloud Condition, Temperature , Atmospheric Pressure , Wind Speed / direction and Visibility reports every 40 seconds.
 - Time refresh atleast once every 500 millis blinky seperator with cloud icon.(rain,sunny..etc) later scrolls out other descriptions.
