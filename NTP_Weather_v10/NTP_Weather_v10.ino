@@ -28,11 +28,11 @@ MD_Parola P = MD_Parola(HARDWARE_TYPE, CS_PIN, MAX_DEVICES);
 textEffect_t FX[4] ={PA_PRINT,PA_SCROLL_LEFT,PA_OPENING_CURSOR, PA_SCROLL_RIGHT};
 
 const char* ssid                  = "Arduino Wifi";     
-const char* password              = "tm1010101";  
+const char* password              = "t*******1";  
 
 char servername[]	          = "api.openweathermap.org"; 
-String weatherLang 	        = "&lang=en";
-String APIKEY 		          = "e876574712e8cd87bad58bc226831414";   // get 1 free api key( token) upon account creation ,openweathermap.org
+String weatherLang 	          = "&lang=en";
+String APIKEY 		          = "e876574712e8cd87***58bc226831414";   // get 1 free api key( token) upon account creation ,openweathermap.org
 String CityID 		          = "1732811";                            // Kluang,Malaysia.
 
 const char* ntpServer 		  = "pool.ntp.org";
