@@ -234,7 +234,7 @@ void sequence(){
                          case 79: printLocalTime();P.print(Tx); break ; case 80: printLocalTime();P.print(Txy); break ;
                          case 81: printLocalTime();P.print(Tx); break ; case 82: printLocalTime();P.print(Txy); break ;
                          case 83: getWeatherData();P.displayText(NTP[2],PA_CENTER , 20, 0, FX[1], FX[1]); break ;
-						             case 84: printLocalTime();P.displayText(NTP[0],PA_LEFT ,15,25, FX[1], FX[0]);break;
+			 case 84: printLocalTime();P.displayText(NTP[0],PA_LEFT ,15,25, FX[1], FX[0]);    break;
                         }  i++;if(i>84){i=1;};  
 	    }
 		
