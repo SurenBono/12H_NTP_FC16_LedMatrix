@@ -191,9 +191,9 @@ void getWeatherData()
 void sequence(){
 	P.setTextAlignment(PA_LEFT);
 	if(WiFi.status() == WL_CONNECTED) 
-	    { 
-	        switch (i) {   case 1 : printLocalTime();P.displayText(NTP[0],PA_LEFT ,20,500, FX[2], FX[0]);break; 
-	                       case 2 : printLocalTime();P.print(Txy); break ;
+      { 
+	 switch (i) {    case 1 : printLocalTime();P.displayText(NTP[0],PA_LEFT ,20,500, FX[2], FX[0]);break; 
+	                 case 2 : printLocalTime();P.print(Txy); break ;
                          case 3 : printLocalTime();P.print(Tx); break ; case 4 : printLocalTime();P.print(Txy); break ;
                          case 5 : printLocalTime();P.print(Tx); break ; case 6 : printLocalTime();P.print(Txy); break ;
                          case 7 : printLocalTime();P.print(Tx); break ; case 8 : printLocalTime();P.print(Txy); break ;
