@@ -13,9 +13,9 @@
 #define HARDWARE_TYPE MD_MAX72XX::FC16_HW
 
 #define MAX_DEVICES 8
-#define DATA_PIN  	13     // SPI MOSI  D7
-#define CS_PIN    	15     // SPI SS    D8
-#define CLK_PIN   	14     // SPI SCK   D5
+#define DATA_PIN    13     // SPI MOSI  D7
+#define CS_PIN      15     // SPI SS    D8
+#define CLK_PIN     14     // SPI SCK   D5
 #define Pz          5      // Piezo VCC D1
 #define GND         4      // Piezo GND pinMode D2
 #define f           4092   // Natural C note crystal octave freq
@@ -28,11 +28,11 @@ MD_Parola P = MD_Parola(HARDWARE_TYPE, CS_PIN, MAX_DEVICES);
 textEffect_t FX[4] ={PA_PRINT,PA_SCROLL_LEFT,PA_SCROLL_UP, PA_SCROLL_RIGHT};
 
 const char* ssid                  = "Arduino Wifi";     
-const char* password              = "tm1010101";  
+const char* password              = "t*******1";  
 
 char servername[]	          = "api.openweathermap.org"; 
-String weatherLang 	        = "&lang=en";
-String APIKEY 		          = "e876574712e8cd87bad58bc226831414";   // get 1 free api key( token) upon account creation ,openweathermap.org
+String weatherLang 	          = "&lang=en";
+String APIKEY 		          = "e876574712e8cd87***58bc226831414";   // get 1 free api key( token) upon account creation ,openweathermap.org
 String CityID 		          = "1732811";                            // Kluang,Malaysia.
 
 const char* ntpServer 		  = "pool.ntp.org";
@@ -177,7 +177,7 @@ void getWeatherData()
   String AP               = ssid;
   String Weather          = "    "+AP+" "+rssi+"    "+D+"    "+Dt+"    "+loc+"    "+cloud+" "+(char(j))+"    Temp : "+String(temp)+(char(144))+"c    Hum : "+humid+" %    Prs : "+press+" hPa " ;
          Weather         += "    Wind : "+String(windSpeed, 1)+" m/s " +"  "+ (char(Arrow))+"  "+ String(windDir) + (char(144)) +" "+Dir ;
-	       Weather         += "    Vis : "+ Vis + " km";
+	 Weather         += "    Vis : "+ Vis + " km";
          Weather.toCharArray(Weatherx,200);
 		 
   Serial.print( loc  + "," + country + " (" + lat + "," + lon + ") ,icon:" ) ;Serial.println(icon);
