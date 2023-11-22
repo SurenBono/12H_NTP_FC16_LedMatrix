@@ -18,7 +18,7 @@
 #define CLK_PIN     14     // SPI SCK   D5
 #define Pz          5      // Piezo VCC D1
 #define GND         4      // Piezo GND pinMode D2
-#define f           4092   // Natural C note crystal octave freq
+#define f           4186   // Natural C note crystal octave freq
 
 //const int Pz = 5; //Piezo Vcc
 //int f= 4092;      //Piezo C NOTE Natural Quartz crystal Frequency on 1hz Octaves
