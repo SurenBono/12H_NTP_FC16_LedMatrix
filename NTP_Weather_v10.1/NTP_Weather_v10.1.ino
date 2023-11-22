@@ -42,7 +42,7 @@ const int   daylightOffset_sec 	  = 0;
 const uint16_t One_SEC = 1000, Half_SEC = 500;
 int i=1,bip=0,j;      
 
-char Tx[15],Txx[15],Txy[15],DDtx[22],Weatherx[200],T2x[15],Beep[6];
+char Tx[15],Txx[15],Txy[15],DDtx[25],Weatherx[200],T2x[15],Beep[6];
 const char *NTP[5]={Tx,DDtx,Weatherx,Txx,Txy};
 
 WiFiClient client;
@@ -99,7 +99,7 @@ void printLocalTime()
          l      = String(char(j))+ T2 ;
          T.toCharArray(Txx,15);l.toCharArray(Txy,15);T2.toCharArray(T2x,15);
          k.toCharArray(Tx,15);
-         DDt.toCharArray(DDtx,22);
+         DDt.toCharArray(DDtx,25);
          Serial.println(T + " " + D + " " + Dt);
          //delay(One_SEC);
          delay(Half_SEC);   // Blink seperator every 1/2 sec
