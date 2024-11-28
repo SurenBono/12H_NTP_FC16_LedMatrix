@@ -6,7 +6,7 @@
 #include <MD_Parola.h>
 #include <MD_MAX72xx.h>
 #include <ESP8266WiFi.h>
-#include <ArduinoJson.h>
+#include <ArduinoJson.h> // Version 5
 
 #include "Weather_Fontx.h"
 
